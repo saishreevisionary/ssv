@@ -1,0 +1,13 @@
+{
+  "name": "dm",
+  "version": "1.0.0",
+  "description": "Sai Shree Visionary Integrated Media Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve -l 8081",
+    "dev": "npx -y serve -l 8081"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

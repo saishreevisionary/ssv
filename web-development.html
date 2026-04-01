@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Web Development Services by SSV Integrated Media — Business websites, E-commerce, Landing Pages, WordPress & Custom CMS solutions." />
+  <title>Web Development Services | SSV Integrated Media</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+  <style>
+    :root {
+      --blue: #1565c0; --blue-dark: #0d2d6e; --blue-mid: #1976d2; --blue-light: #2196f3;
+      --gold: #ff6d00; --gold-light: #ff8f00; --gold-dark: #e65100;
+      --dark: #080d1e; --dark-mid: #0c1430; --dark-card: #0f1a3a;
+      --white: #ffffff; --off-white: #f4f6fb; --text: #1e2a4a; --text-muted: #5b6b9a;
+      --gray-light: #9ba8ce; --radius: 16px; --radius-xl: 24px;
+      --font: 'Inter', system-ui, sans-serif;
+      --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+      --shadow: 0 8px 40px rgba(21,101,192,0.14);
+      --shadow-gold: 0 8px 32px rgba(255,109,0,0.35);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--text); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px; background: rgba(8,13,30,0.95);
+      backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .logo-pill {
+      height: 56px; width: 175px; background: rgba(255,255,255,0.96);
+      border-radius: 12px; padding: 5px 10px; display: flex;
+      align-items: center; justify-content: center;
+    }
+    .logo-pill img { height: 100%; width: 100%; object-fit: contain; }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.75); font-size: 0.88rem; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: 50px;
+      padding: 8px 20px; transition: var(--transition);
+    }
+    .back-btn:hover { color: var(--gold); border-color: var(--gold); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--dark); font-weight: 700; font-size: 0.88rem;
+      padding: 10px 24px; border-radius: 50px;
+      box-shadow: 0 4px 0 rgba(180,80,0,0.5), 0 6px 20px rgba(255,109,0,0.3);
+      transition: var(--transition);
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 7px 0 rgba(180,80,0,0.4), 0 10px 28px rgba(255,109,0,0.45); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--dark-mid) 50%, #0d2d6e 100%);
+      position: relative; overflow: hidden; padding-top: 80px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,109,0,0.12) 1px, transparent 0);
+      background-size: 40px 40px;
+      animation: gridMove 20s linear infinite;
+    }
+    @keyframes gridMove { 100% { background-position: 40px 40px; } }
+    .hero-glow { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+    .hero-glow-1 { width: 600px; height: 600px; background: rgba(21,101,192,0.25); top: -100px; right: -100px; }
+    .hero-glow-2 { width: 400px; height: 400px; background: rgba(255,109,0,0.15); bottom: -50px; left: 5%; }
+
+    /* Floating shapes */
+    .fshape { position: absolute; pointer-events: none; }
+    .fshape-1 { width: 120px; height: 120px; border: 2px solid rgba(255,109,0,0.3); border-radius: 50%; top: 15%; right: 10%; animation: spin 18s linear infinite; }
+    .fshape-2 { width: 60px; height: 60px; border: 1.5px solid rgba(33,150,243,0.4); border-radius: 8px; bottom: 20%; right: 20%; animation: rotateSq 14s linear infinite; }
+    .fshape-3 { width: 80px; height: 80px; background: radial-gradient(circle, rgba(255,109,0,0.2), transparent 70%); border-radius: 50%; top: 60%; left: 5%; animation: pulse 8s ease-in-out infinite; }
+    @keyframes spin { 100% { transform: rotate(360deg) rotateX(180deg); } }
+    @keyframes rotateSq { 100% { transform: rotate(360deg) rotateY(360deg); } }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: 0.4; } 50% { transform: scale(1.2); opacity: 0.7; } }
+
+    .hero-content { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 60px 0; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,109,0,0.1); border: 1px solid rgba(255,109,0,0.3);
+      color: var(--gold); padding: 8px 20px; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 700; margin-bottom: 20px; letter-spacing: 0.5px;
+    }
+    .hero-title { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 900; color: var(--white); line-height: 1.15; margin-bottom: 20px; }
+    .hero-title span { background: linear-gradient(135deg, #ff8f00, #ff6d00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 3px 8px rgba(255,109,0,0.4)); }
+    .hero-desc { color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.75; margin-bottom: 32px; max-width: 480px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--dark); font-weight: 700; padding: 14px 32px; border-radius: 50px;
+      box-shadow: 0 5px 0 rgba(180,80,0,0.55), 0 8px 25px rgba(255,109,0,0.4);
+      transition: var(--transition); font-size: 0.95rem;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 0 rgba(180,80,0,0.45), 0 14px 35px rgba(255,109,0,0.5); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 9px;
+      border: 1.5px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.85);
+      padding: 14px 30px; border-radius: 50px; font-size: 0.95rem; font-weight: 600;
+      transition: var(--transition);
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* HERO VISUAL */
+    .hero-visual { display: flex; flex-direction: column; gap: 16px; perspective: 1000px; }
+    .code-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px; padding: 20px 24px; backdrop-filter: blur(20px);
+      box-shadow: 20px 20px 60px rgba(0,0,0,0.5);
+      transform: rotateY(-6deg) rotateX(3deg);
+    }
+    .code-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+    .dot-r { width: 12px; height: 12px; border-radius: 50%; background: #ff5f57; }
+    .dot-y { width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; }
+    .dot-g { width: 12px; height: 12px; border-radius: 50%; background: #28ca41; }
+    .code-line { font-family: 'Courier New', monospace; font-size: 0.82rem; margin-bottom: 6px; color: rgba(255,255,255,0.7); }
+    .code-line .kw { color: #ff8f00; } .code-line .fn { color: #64b5f6; } .code-line .str { color: #a5d6a7; } .code-line .cm { color: rgba(255,255,255,0.35); }
+    .stats-row { display: flex; gap: 14px; }
+    .stat-mini {
+      flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; padding: 16px; text-align: center; backdrop-filter: blur(10px);
+    }
+    .stat-val { font-size: 1.7rem; font-weight: 900; color: var(--gold); text-shadow: 0 2px 8px rgba(255,109,0,0.4); }
+    .stat-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.5); font-weight: 500; text-transform: uppercase; margin-top: 3px; }
+
+    /* WHAT WE BUILD */
+    .section { padding: 90px 0; }
+    .section-tag {
+      display: inline-block; background: rgba(255,109,0,0.1); border: 1px solid rgba(255,109,0,0.25);
+      color: var(--gold); padding: 6px 18px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: var(--text); margin-bottom: 14px; line-height: 1.25; }
+    .section-title.light { color: var(--white); }
+    .section-desc { font-size: 1rem; color: var(--text-muted); max-width: 580px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 60px; }
+
+    /* SERVICE TYPES GRID */
+    .types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .type-card {
+      background: var(--white); border-radius: var(--radius-xl); padding: 32px 26px;
+      box-shadow: var(--shadow); border: 1px solid rgba(21,101,192,0.07);
+      transition: var(--transition); position: relative; overflow: hidden;
+    }
+    .type-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--blue), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
+    .type-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(21,101,192,0.18); }
+    .type-card:hover::before { transform: scaleX(1); }
+    .type-icon { width: 58px; height: 58px; background: linear-gradient(135deg, var(--blue), var(--blue-mid)); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--white); margin-bottom: 18px; box-shadow: 0 8px 24px rgba(21,101,192,0.3); transition: var(--transition); }
+    .type-card:hover .type-icon { background: linear-gradient(135deg, var(--gold), var(--gold-light)); box-shadow: var(--shadow-gold); }
+    .type-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .type-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 16px; }
+    .type-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { background: rgba(21,101,192,0.07); color: var(--blue); border-radius: 50px; padding: 3px 12px; font-size: 0.74rem; font-weight: 600; }
+
+    /* TECH STACK */
+    .tech-section { background: linear-gradient(135deg, var(--dark), var(--dark-mid)); color: var(--white); }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 20px; }
+    .tech-item {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; padding: 20px 16px; text-align: center;
+      transition: var(--transition); cursor: default;
+    }
+    .tech-item:hover { background: rgba(255,109,0,0.08); border-color: rgba(255,109,0,0.3); transform: translateY(-4px); }
+    .tech-item i { font-size: 2rem; margin-bottom: 10px; display: block; color: var(--gold); }
+    .tech-item span { font-size: 0.78rem; color: rgba(255,255,255,0.65); font-weight: 600; }
+
+    /* PACKAGES */
+    .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; }
+    .pkg-card {
+      background: var(--white); border-radius: var(--radius-xl); padding: 38px 30px;
+      border: 2px solid rgba(21,101,192,0.08); transition: var(--transition); position: relative;
+    }
+    .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(21,101,192,0.15); }
+    .pkg-card.featured { background: linear-gradient(135deg, var(--blue), var(--blue-mid)); border-color: var(--blue-mid); transform: scale(1.04); box-shadow: 0 24px 70px rgba(21,101,192,0.45); }
+    .pkg-card.featured:hover { transform: scale(1.04) translateY(-6px); }
+    .pkg-card.featured * { color: var(--white) !important; }
+    .pkg-card.featured .pkg-price .amount { color: var(--gold-light) !important; text-shadow: 0 2px 8px rgba(255,109,0,0.4); }
+    .pkg-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--dark) !important; padding: 5px 22px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; white-space: nowrap; box-shadow: var(--shadow-gold); }
+    .pkg-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--blue); margin-bottom: 12px; }
+    .pkg-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+    .currency { font-size: 1.5rem; font-weight: 700; color: var(--text); }
+    .amount { font-size: 2.8rem; font-weight: 900; color: var(--text); line-height: 1; }
+    .period { font-size: 0.88rem; color: var(--text-muted); }
+    .pkg-desc { font-size: 0.86rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
+    .pkg-features { margin-bottom: 28px; }
+    .pkg-features li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid rgba(21,101,192,0.07); font-size: 0.87rem; color: var(--text); }
+    .pkg-features li:last-child { border-bottom: none; }
+    .pkg-features li i.fa-check { color: var(--blue); }
+    .pkg-features li.dim { opacity: 0.4; }
+    .btn-pkg {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 13px; border-radius: 50px; font-weight: 700; font-size: 0.92rem;
+      transition: var(--transition); cursor: pointer; border: 2px solid var(--blue);
+      background: transparent; color: var(--blue);
+    }
+    .btn-pkg:hover { background: var(--blue); color: var(--white); }
+    .pkg-card.featured .btn-pkg { background: rgba(255,255,255,0.15); color: var(--white) !important; border-color: rgba(255,255,255,0.4) !important; }
+    .pkg-card.featured .btn-pkg:hover { background: var(--gold); border-color: var(--gold) !important; color: var(--dark) !important; }
+
+    /* PROCESS */
+    .process-section { background: var(--off-white); }
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; position: relative; }
+    .process-grid::before { content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--blue), var(--gold)); z-index: 0; }
+    .proc-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+    .proc-num { font-size: 3rem; font-weight: 900; color: rgba(21,101,192,0.07); line-height: 1; margin-bottom: -16px; }
+    .proc-icon { width: 66px; height: 66px; background: linear-gradient(135deg, var(--blue), var(--blue-mid)); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--white); margin: 0 auto 18px; border: 4px solid var(--white); box-shadow: 0 8px 24px rgba(21,101,192,0.35); transition: var(--transition); }
+    .proc-step:hover .proc-icon { background: linear-gradient(135deg, var(--gold), var(--gold-light)); box-shadow: var(--shadow-gold); transform: scale(1.08); }
+    .proc-step h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .proc-step p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* FAQ */
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid rgba(21,101,192,0.1); }
+    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: var(--font); font-size: 1rem; font-weight: 700; color: var(--text); transition: var(--transition); }
+    .faq-q:hover { color: var(--blue); }
+    .faq-q i { color: var(--gold); font-size: 0.9rem; flex-shrink: 0; transition: var(--transition); }
+    .faq-q.open i { transform: rotate(45deg); }
+    .faq-a { font-size: 0.92rem; color: var(--text-muted); line-height: 1.75; padding: 0 0 20px; display: none; }
+    .faq-a.open { display: block; }
+
+    /* FORM */
+    .inquiry-section { background: linear-gradient(135deg, var(--dark), var(--dark-mid)); }
+    .inquiry-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .inquiry-info h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; color: var(--white); margin-bottom: 16px; line-height: 1.25; }
+    .inquiry-info p { color: var(--gray-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 28px; }
+    .hl { color: var(--gold); }
+    .check-list li { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 0.92rem; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list i { color: var(--gold); flex-shrink: 0; }
+    .form-card { background: var(--white); border-radius: var(--radius-xl); padding: 36px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+    .form-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+    .form-card > p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; }
+    .fg { margin-bottom: 16px; }
+    .fg label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .fg input, .fg select, .fg textarea { width: 100%; padding: 12px 16px; border: 1.5px solid rgba(21,101,192,0.12); border-radius: 10px; font-family: var(--font); font-size: 0.9rem; color: var(--text); background: var(--off-white); outline: none; transition: var(--transition); }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--blue); background: var(--white); box-shadow: 0 0 0 3px rgba(21,101,192,0.1); }
+    .fg textarea { resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .btn-form { width: 100%; display: flex; align-items: center; justify-content: center; gap: 9px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--dark); font-weight: 700; font-size: 1rem; padding: 14px; border-radius: 50px; border: none; cursor: pointer; box-shadow: 0 5px 0 rgba(180,80,0,0.55), 0 8px 25px rgba(255,109,0,0.4); transition: var(--transition); margin-top: 8px; }
+    .btn-form:hover { transform: translateY(-2px); box-shadow: 0 8px 0 rgba(180,80,0,0.45), 0 14px 35px rgba(255,109,0,0.5); }
+    .success-msg { display: none; text-align: center; padding: 16px; background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); border-radius: 12px; margin-top: 14px; }
+    .success-msg i { font-size: 1.6rem; color: #22c55e; display: block; margin-bottom: 6px; }
+
+    /* FOOTER */
+    footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    footer p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: rgba(255,255,255,0.45); font-size: 0.82rem; transition: var(--transition); }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-content, .inquiry-wrapper { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .packages-grid { grid-template-columns: 1fr; }
+      .pkg-card.featured { transform: none; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid::before { display: none; }
+      nav { padding: 14px 20px; }
+    }
+    @media (max-width: 550px) {
+      .process-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .types-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo-pill">
+      <img src="logo.png" alt="SSV Integrated Media Logo" />
+    </div>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <a href="#inquire" class="nav-cta"><i class="fas fa-paper-plane"></i> Get a Quote</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="fshape fshape-1"></div>
+    <div class="fshape fshape-2"></div>
+    <div class="fshape fshape-3"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge"><i class="fas fa-code"></i> Web Development Services</div>
+          <h1 class="hero-title">Websites That <span>Convert</span> Visitors Into Customers</h1>
+          <p class="hero-desc">We build fast, modern, mobile-first websites tailored specifically for your business goals. From landing pages to full e-commerce platforms — every pixel is crafted to drive results.</p>
+          <div class="hero-btns">
+            <a href="#inquire" class="btn-primary"><i class="fas fa-rocket"></i> Start Your Project</a>
+            <a href="#packages" class="btn-secondary"><i class="fas fa-tag"></i> View Packages</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="code-header"><div class="dot-r"></div><div class="dot-y"></div><div class="dot-g"></div></div>
+            <div class="code-line"><span class="cm">// SSV Web Development</span></div>
+            <div class="code-line"><span class="kw">const</span> website = <span class="fn">buildSite</span>({</div>
+            <div class="code-line">&nbsp;&nbsp;design: <span class="str">'premium'</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;performance: <span class="str">'blazing-fast'</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;seo: <span class="str">'optimized'</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;conversion: <span class="str">'maximized'</span></div>
+            <div class="code-line">});</div>
+            <div class="code-line"><span class="cm">// Result → Growth 🚀</span></div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-mini"><div class="stat-val">150+</div><div class="stat-lbl">Sites Launched</div></div>
+            <div class="stat-mini"><div class="stat-val">98%</div><div class="stat-lbl">Client Satisfaction</div></div>
+            <div class="stat-mini"><div class="stat-val">3x</div><div class="stat-lbl">Avg Lead Growth</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE BUILD -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-layer-group"></i> What We Build</div>
+        <h2 class="section-title">Complete Web Solutions for Every Business Need</h2>
+        <p class="section-desc">From simple brochure sites to complex platforms — we deliver tailored web experiences.</p>
+      </div>
+      <div class="types-grid">
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1">
+          <div class="type-icon"><i class="fas fa-building"></i></div>
+          <h3>Business & Corporate Websites</h3>
+          <p>Professional multi-page websites that establish credibility and drive inquiries for B2B and B2C businesses.</p>
+          <div class="type-tags"><span class="tag">Responsive</span><span class="tag">SEO-Ready</span><span class="tag">CMS</span></div>
+        </div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1">
+          <div class="type-icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>E-Commerce Platforms</h3>
+          <p>Full-featured online stores with secure payments, inventory management, and high-converting checkout flows.</p>
+          <div class="type-tags"><span class="tag">WooCommerce</span><span class="tag">Shopify</span><span class="tag">Custom</span></div>
+        </div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1">
+          <div class="type-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>High-Converting Landing Pages</h3>
+          <p>Laser-focused single pages designed to convert ad traffic, generate leads, and maximize ROAS for campaigns.</p>
+          <div class="type-tags"><span class="tag">Lead Gen</span><span class="tag">A/B Test</span><span class="tag">Fast</span></div>
+        </div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1">
+          <div class="type-icon"><i class="fab fa-wordpress"></i></div>
+          <h3>WordPress & Custom CMS</h3>
+          <p>Easy-to-manage WordPress sites or custom CMS solutions so you can update content without technical knowledge.</p>
+          <div class="type-tags"><span class="tag">WordPress</span><span class="tag">Custom CMS</span><span class="tag">Training</span></div>
+        </div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1">
+          <div class="type-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Progressive Web Apps (PWA)</h3>
+          <p>App-like web experiences that load instantly, work offline, and can be installed on any device.</p>
+          <div class="type-tags"><span class="tag">PWA</span><span class="tag">Offline</span><span class="tag">Installable</span></div>
+        </div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1">
+          <div class="type-icon"><i class="fas fa-tools"></i></div>
+          <h3>Website Redesign & Migration</h3>
+          <p>Revamp your outdated site with modern design, improved speed, and better SEO without losing your rankings.</p>
+          <div class="type-tags"><span class="tag">Redesign</span><span class="tag">Migration</span><span class="tag">SEO Safe</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section tech-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="background:rgba(255,109,0,0.1);border-color:rgba(255,109,0,0.25);color:var(--gold)"><i class="fas fa-microchip"></i> Tech Stack</div>
+        <h2 class="section-title light">Technologies We Master</h2>
+        <p class="section-desc" style="color:var(--gray-light)">Cutting-edge tools and frameworks delivering performance, scalability, and great UX.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item"><i class="fab fa-html5" style="color:#e44d26"></i><span>HTML5</span></div>
+        <div class="tech-item"><i class="fab fa-css3-alt" style="color:#264de4"></i><span>CSS3</span></div>
+        <div class="tech-item"><i class="fab fa-js-square" style="color:#f7df1e"></i><span>JavaScript</span></div>
+        <div class="tech-item"><i class="fab fa-react" style="color:#61dafb"></i><span>React</span></div>
+        <div class="tech-item"><i class="fab fa-node-js" style="color:#3c873a"></i><span>Node.js</span></div>
+        <div class="tech-item"><i class="fab fa-wordpress" style="color:#21759b"></i><span>WordPress</span></div>
+        <div class="tech-item"><i class="fab fa-php" style="color:#777bb4"></i><span>PHP</span></div>
+        <div class="tech-item"><i class="fas fa-database" style="color:#00758f"></i><span>MySQL</span></div>
+        <div class="tech-item"><i class="fab fa-shopify" style="color:#7ab55c"></i><span>Shopify</span></div>
+        <div class="tech-item"><i class="fas fa-fire" style="color:#ff4500"></i><span>Firebase</span></div>
+        <div class="tech-item"><i class="fas fa-server" style="color:#ff6d00"></i><span>REST API</span></div>
+        <div class="tech-item"><i class="fab fa-figma" style="color:#f24e1e"></i><span>Figma</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-tag"></i> Packages</div>
+        <h2 class="section-title">Transparent Pricing for Every Budget</h2>
+        <p class="section-desc">All packages include mobile responsive design, SEO setup, and 30-day post-launch support.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08">
+          <div class="pkg-label">Starter</div>
+          <p class="pkg-desc">Perfect for small businesses needing a professional online presence fast.</p>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Up to 5 Pages</li>
+            <li><i class="fas fa-check"></i> Mobile Responsive</li>
+            <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+            <li><i class="fas fa-check"></i> Contact Form</li>
+            <li><i class="fas fa-check"></i> 15-Day Delivery</li>
+            <li class="dim"><i class="fas fa-times"></i> E-Commerce</li>
+            <li class="dim"><i class="fas fa-times"></i> Custom Animations</li>
+          </ul>
+          <a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a>
+        </div>
+        <div class="pkg-card featured" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.12">
+          <div class="pkg-badge">⭐ Most Popular</div>
+          <div class="pkg-label">Professional</div>
+          <p class="pkg-desc">Full-featured website for growing businesses ready to scale and convert.</p>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Up to 15 Pages</li>
+            <li><i class="fas fa-check"></i> Premium Design & Animations</li>
+            <li><i class="fas fa-check"></i> Full SEO Optimization</li>
+            <li><i class="fas fa-check"></i> Lead Capture & CRM</li>
+            <li><i class="fas fa-check"></i> Blog Integration</li>
+            <li><i class="fas fa-check"></i> Google Analytics</li>
+            <li><i class="fas fa-check"></i> 21-Day Delivery</li>
+          </ul>
+          <a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a>
+        </div>
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08">
+          <div class="pkg-label">Enterprise</div>
+          <p class="pkg-desc">Custom-built e-commerce or web application for large-scale businesses.</p>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Unlimited Pages</li>
+            <li><i class="fas fa-check"></i> E-Commerce / Web App</li>
+            <li><i class="fas fa-check"></i> Custom Backend & API</li>
+            <li><i class="fas fa-check"></i> Payment Gateway</li>
+            <li><i class="fas fa-check"></i> Admin Dashboard</li>
+            <li><i class="fas fa-check"></i> 90-Day Support</li>
+            <li><i class="fas fa-check"></i> Custom Timeline</li>
+          </ul>
+          <a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-route"></i> Our Process</div>
+        <h2 class="section-title">From Idea to Launch in 4 Steps</h2>
+      </div>
+      <div class="process-grid">
+        <div class="proc-step">
+          <div class="proc-num">01</div>
+          <div class="proc-icon"><i class="fas fa-lightbulb"></i></div>
+          <h4>Discovery & Strategy</h4>
+          <p>We understand your goals, target audience, and competitors to craft data-driven strategy.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">02</div>
+          <div class="proc-icon"><i class="fas fa-paint-brush"></i></div>
+          <h4>Design & Prototype</h4>
+          <p>Custom Figma designs and interactive prototypes shared for your approval before coding begins.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">03</div>
+          <div class="proc-icon"><i class="fas fa-code"></i></div>
+          <h4>Build & Test</h4>
+          <p>Clean code, performance-optimized, cross-browser tested, and rigorously QA'd on all devices.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">04</div>
+          <div class="proc-icon"><i class="fas fa-rocket"></i></div>
+          <h4>Launch & Support</h4>
+          <p>We handle deployment, DNS setup, and provide post-launch support to ensure smooth operation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-question-circle"></i> FAQ</div>
+        <h2 class="section-title">Common Questions Answered</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q"><span>How long does it take to build a website?</span><i class="fas fa-plus"></i></button>
+          <div class="faq-a">Typically 15–30 days for a business website and 30–60 days for e-commerce or custom web apps, depending on complexity and content readiness from your side.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Do you provide website hosting?</span><i class="fas fa-plus"></i></button>
+          <div class="faq-a">Yes, we can set up and recommend reliable hosting services for your website. We typically recommend cloud hosting on services like Hostinger, AWS, or DigitalOcean based on your traffic expectations.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Will my website be mobile-friendly?</span><i class="fas fa-plus"></i></button>
+          <div class="faq-a">Absolutely! Every website we build is 100% mobile responsive and tested across iOS and Android devices, as well as multiple screen sizes and browsers.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can I update the website myself after launch?</span><i class="fas fa-plus"></i></button>
+          <div class="faq-a">Yes! For WordPress/CMS-based sites, we provide training so you can update content, add blogs, and manage pages independently. For custom sites, we offer maintenance packages.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Do you offer ongoing maintenance?</span><i class="fas fa-plus"></i></button>
+          <div class="faq-a">Yes, we offer monthly maintenance packages starting from ₹2,999/month that include security updates, backups, performance monitoring, and minor content changes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INQUIRY FORM -->
+  <section class="section inquiry-section" id="inquire">
+    <div class="container">
+      <div class="inquiry-wrapper">
+        <div class="inquiry-info">
+          <div class="section-tag" style="background:rgba(255,109,0,0.1);border-color:rgba(255,109,0,0.25);color:var(--gold)"><i class="fas fa-envelope"></i> Start Your Project</div>
+          <h2>Let's Build Something <span class="hl">Amazing</span> Together</h2>
+          <p>Fill in the form and our web development team will get back to you within 24 hours with a detailed proposal and timeline.</p>
+          <ul class="check-list">
+            <li><i class="fas fa-check-circle"></i> Free consultation call included</li>
+            <li><i class="fas fa-check-circle"></i> Custom quote — no hidden costs</li>
+            <li><i class="fas fa-check-circle"></i> Figma design preview before development</li>
+            <li><i class="fas fa-check-circle"></i> 30-day post-launch support</li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <h3>Send Us Your Requirements</h3>
+          <p>We'll respond within 24 business hours.</p>
+          <form id="webDevForm">
+            <div class="form-row">
+              <div class="fg"><label>Your Name *</label><input type="text" name="name" placeholder="Full name" required /></div>
+              <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div>
+            </div>
+            <div class="fg"><label>Business Email *</label><input type="email" name="email" placeholder="name@company.com" required /></div>
+            <div class="fg">
+              <label>Website Type *</label>
+              <select name="website_type" required>
+                <option value="">Select website type...</option>
+                <option>Business / Corporate Website</option>
+                <option>E-Commerce Store</option>
+                <option>Landing Page</option>
+                <option>WordPress Website</option>
+                <option>Custom Web Application</option>
+                <option>Website Redesign</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Budget Range</label>
+              <select name="budget">
+                <option>Under ₹15,000</option>
+                <option>₹15,000 – ₹35,000</option>
+                <option>₹35,000 – ₹80,000</option>
+                <option>₹80,000+</option>
+              </select>
+            </div>
+            <div class="fg"><label>Project Details</label><textarea name="message" rows="3" placeholder="Tell us about your project, goals, and any references you like..."></textarea></div>
+            <button type="submit" class="btn-form"><i class="fas fa-paper-plane"></i> Submit Requirements</button>
+            <div class="success-msg" id="wd-success" style="display:none;">
+              <i class="fas fa-check-circle"></i>
+              <strong>Request Received! 🎉</strong>
+              <p style="font-size:0.85rem;color:#666;margin-top:6px">Our team will contact you within 24 hours.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Sai Shree Visionary Integrated Media. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">All Services</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="service-page.js"></script>
+  <script src="form-handler.js"></script>
+</body>
+</html>

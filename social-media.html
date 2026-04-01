@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Social Media Management Services by SSV Integrated Media — Instagram, Facebook, LinkedIn, YouTube — content, growth & engagement." />
+  <title>Social Media Management | SSV Integrated Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+  <link rel="stylesheet" href="service-page.css" />
+  <style>
+    :root {
+      --accent:#e040fb; --accent-dark:#ab00d6; --accent-glow:rgba(224,64,251,0.35);
+      --hero-bg:linear-gradient(135deg,#080d1e 0%,#150d2a 50%,#0d0a28 100%);
+    }
+    .hero-badge{background:rgba(224,64,251,0.1);border-color:rgba(224,64,251,0.3);color:#e040fb;}
+    .hero-title span{background:linear-gradient(135deg,#f48fb1,#e040fb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 3px 8px rgba(224,64,251,0.4));}
+    .btn-primary{background:linear-gradient(135deg,#e040fb,#ab00d6);color:#fff;box-shadow:0 5px 0 rgba(100,0,140,0.55),0 8px 25px rgba(224,64,251,0.35);}
+    .btn-secondary:hover{border-color:#e040fb;color:#e040fb;}
+    .stat-val{color:#e040fb;text-shadow:0 2px 8px rgba(224,64,251,0.4);}
+    .section-tag{background:rgba(224,64,251,0.1);border-color:rgba(224,64,251,0.25);color:#e040fb;}
+    .type-card::before{background:linear-gradient(90deg,#e040fb,#1565c0);}
+    .type-card:hover{box-shadow:0 24px 60px rgba(224,64,251,0.15);}
+    .type-icon{background:linear-gradient(135deg,#e040fb,#ab00d6);box-shadow:0 8px 24px rgba(224,64,251,0.3);}
+    .type-card:hover .type-icon{background:linear-gradient(135deg,var(--gold),var(--gold-light));box-shadow:var(--shadow-gold);}
+    .tag{background:rgba(224,64,251,0.08);color:#ab00d6;}
+    .tech-section{background:linear-gradient(135deg,#080d1e,#150d2a);}
+    .tech-item:hover{background:rgba(224,64,251,0.08);border-color:rgba(224,64,251,0.3);}
+    .tech-item i{color:#e040fb;}
+    .pkg-card.featured{background:linear-gradient(135deg,#6a1b9a,#4a148c);border-color:#e040fb;box-shadow:0 24px 70px rgba(224,64,251,0.4);}
+    .pkg-card.featured .amount{color:#f48fb1!important;}
+    .pkg-label{color:#ab00d6;}
+    .pkg-features li i.fa-check{color:#ab00d6;}
+    .btn-pkg{border:2px solid #ab00d6;color:#ab00d6;}
+    .btn-pkg:hover{background:#ab00d6;color:#fff;}
+    .process-grid::before{background:linear-gradient(90deg,#e040fb,#1565c0);}
+    .proc-icon{background:linear-gradient(135deg,#e040fb,#ab00d6);box-shadow:0 8px 24px rgba(224,64,251,0.35);}
+    .faq-q:hover{color:#e040fb;}
+    .inquiry-section{background:linear-gradient(135deg,#080d1e,#150d2a);}
+    .hl{color:#e040fb;}
+    .check-list i{color:#e040fb;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#e040fb;box-shadow:0 0 0 3px rgba(224,64,251,0.1);}
+    .btn-form{background:linear-gradient(135deg,#e040fb,#ab00d6);color:#fff;box-shadow:0 5px 0 rgba(100,0,140,0.55),0 8px 25px rgba(224,64,251,0.35);}
+    .success-msg i{color:#e040fb;}
+    .footer-links a:hover{color:#e040fb;}
+    .fshape-1{border-color:rgba(224,64,251,0.3);}
+    .fshape-2{border-color:rgba(255,109,0,0.4);}
+    .fshape-3{background:radial-gradient(circle,rgba(224,64,251,0.2),transparent 70%);}
+    /* Social Media Preview Card */
+    .social-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:18px;backdrop-filter:blur(20px);box-shadow:20px 20px 60px rgba(0,0,0,0.5);transform:rotateY(-6deg) rotateX(3deg);}
+    .sm-post{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:10px;display:flex;gap:12px;align-items:center;}
+    .sm-avatar{width:36px;height:36px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem;}
+    .sm-info{flex:1;}
+    .sm-name{font-size:0.78rem;font-weight:700;color:#fff;margin-bottom:2px;}
+    .sm-metric{font-size:0.72rem;font-weight:700;}
+    .sm-bar{height:4px;border-radius:2px;margin-top:6px;background:rgba(255,255,255,0.1);}
+    .sm-bar-fill{height:100%;border-radius:2px;}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-pill"><img src="logo.png" alt="SSV Logo" /></div>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <a href="#inquire" class="nav-cta"><i class="fas fa-share-nodes"></i> Get Free Strategy</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow hero-glow-1" style="background:rgba(224,64,251,0.1);top:-80px;right:-80px;"></div>
+    <div class="hero-glow hero-glow-2" style="background:rgba(21,101,192,0.15);bottom:-30px;left:5%;"></div>
+    <div class="fshape fshape-1"></div><div class="fshape fshape-2"></div><div class="fshape fshape-3"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge"><i class="fas fa-share-nodes"></i> Social Media Management</div>
+          <h1 class="hero-title">Build a Brand That <span>Sells on Social</span></h1>
+          <p class="hero-desc">We manage your Instagram, Facebook, LinkedIn, and YouTube with compelling content, strategic posting, and community engagement that turns followers into loyal customers.</p>
+          <div class="hero-btns">
+            <a href="#inquire" class="btn-primary"><i class="fas fa-rocket"></i> Get Free Strategy Call</a>
+            <a href="#packages" class="btn-secondary"><i class="fas fa-tag"></i> View Packages</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="social-card">
+            <div class="sm-post">
+              <div class="sm-avatar" style="background:linear-gradient(135deg,#e040fb,#ab00d6);"><i class="fab fa-instagram" style="color:#fff;"></i></div>
+              <div class="sm-info"><div class="sm-name">Instagram</div><div class="sm-metric" style="color:#e040fb;">+2.4K Followers this month</div><div class="sm-bar"><div class="sm-bar-fill" style="width:78%;background:#e040fb;"></div></div></div>
+            </div>
+            <div class="sm-post">
+              <div class="sm-avatar" style="background:linear-gradient(135deg,#1877f2,#0d5cbf);"><i class="fab fa-facebook" style="color:#fff;"></i></div>
+              <div class="sm-info"><div class="sm-name">Facebook</div><div class="sm-metric" style="color:#1877f2;">+890 Page Likes</div><div class="sm-bar"><div class="sm-bar-fill" style="width:60%;background:#1877f2;"></div></div></div>
+            </div>
+            <div class="sm-post">
+              <div class="sm-avatar" style="background:linear-gradient(135deg,#0077b5,#005988);"><i class="fab fa-linkedin" style="color:#fff;"></i></div>
+              <div class="sm-info"><div class="sm-name">LinkedIn</div><div class="sm-metric" style="color:#0077b5;">+320 Connections</div><div class="sm-bar"><div class="sm-bar-fill" style="width:45%;background:#0077b5;"></div></div></div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-mini"><div class="stat-val">5x</div><div class="stat-lbl">Avg Reach ↑</div></div>
+            <div class="stat-mini"><div class="stat-val">200+</div><div class="stat-lbl">Posts/Month</div></div>
+            <div class="stat-mini"><div class="stat-val">40+</div><div class="stat-lbl">Brands Managed</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-layer-group"></i> What We Do</div>
+        <h2 class="section-title">Complete Social Media Growth Services</h2>
+        <p class="section-desc">We handle strategy, content, scheduling, engagement and analytics across all platforms.</p>
+      </div>
+      <div class="types-grid">
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fab fa-instagram"></i></div><h3>Instagram &amp; Facebook Management</h3><p>Full management: content calendar, Reels, Stories, carousels, captions, hashtags, and engagement replies.</p><div class="type-tags"><span class="tag">Reels</span><span class="tag">Stories</span><span class="tag">Hashtags</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-palette"></i></div><h3>Creative Content Production</h3><p>Scroll-stopping graphics, Canva designs, branded templates, and short-form video editing for all platforms.</p><div class="type-tags"><span class="tag">Design</span><span class="tag">Video Edit</span><span class="tag">Branding</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-users"></i></div><h3>Community Engagement &amp; Growth</h3><p>Daily comment replies, DM management, follower outreach, and active community building to grow authentic audience.</p><div class="type-tags"><span class="tag">Engagement</span><span class="tag">DMs</span><span class="tag">Growth</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fab fa-linkedin"></i></div><h3>LinkedIn &amp; YouTube Strategy</h3><p>B2B content strategy for LinkedIn and YouTube content planning, thumbnail design, and channel optimization.</p><div class="type-tags"><span class="tag">LinkedIn</span><span class="tag">YouTube</span><span class="tag">Thumbnails</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-chart-pie"></i></div><h3>Performance Analytics</h3><p>Monthly reports on reach, impressions, follower growth, engagement rate, and content performance insights.</p><div class="type-tags"><span class="tag">Reports</span><span class="tag">KPIs</span><span class="tag">Insights</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-star"></i></div><h3>Influencer Collaboration</h3><p>Identify and connect with relevant micro and macro influencers in your niche for authentic brand partnerships.</p><div class="type-tags"><span class="tag">Influencers</span><span class="tag">Collab</span><span class="tag">UGC</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tech-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="background:rgba(255,109,0,0.1);border-color:rgba(255,109,0,0.25);color:var(--gold)"><i class="fas fa-network-wired"></i> Platforms</div>
+        <h2 class="section-title light">Platforms We Manage</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item"><i class="fab fa-instagram" style="color:#e040fb;"></i><span>Instagram</span></div>
+        <div class="tech-item"><i class="fab fa-facebook" style="color:#1877f2;"></i><span>Facebook</span></div>
+        <div class="tech-item"><i class="fab fa-linkedin" style="color:#0077b5;"></i><span>LinkedIn</span></div>
+        <div class="tech-item"><i class="fab fa-youtube" style="color:#ff0000;"></i><span>YouTube</span></div>
+        <div class="tech-item"><i class="fab fa-twitter" style="color:#1da1f2;"></i><span>Twitter/X</span></div>
+        <div class="tech-item"><i class="fab fa-pinterest" style="color:#e60023;"></i><span>Pinterest</span></div>
+        <div class="tech-item"><i class="fab fa-whatsapp" style="color:#25d366;"></i><span>WhatsApp Channel</span></div>
+        <div class="tech-item"><i class="fas fa-share-nodes" style="color:#e040fb;"></i><span>Threads</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-tag"></i> Packages</div>
+        <h2 class="section-title">Social Media Packages</h2>
+        <p class="section-desc">All packages include dedicated content creator, monthly strategy call, and performance report.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Starter</div><p class="pkg-desc">For startups needing a solid social presence on 1-2 platforms.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> 2 Platforms (IG + FB)</li><li><i class="fas fa-check"></i> 12 Posts/month</li><li><i class="fas fa-check"></i> Graphic Design</li><li><i class="fas fa-check"></i> Caption + Hashtags</li><li><i class="fas fa-check"></i> Monthly Report</li><li class="dim"><i class="fas fa-times"></i> Reels/Video</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card featured" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.12"><div class="pkg-badge">⭐ Most Popular</div><div class="pkg-label">Growth</div><p class="pkg-desc">Most popular — full management of 3 platforms with Reels and engagement.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> 3 Platforms + YouTube</li><li><i class="fas fa-check"></i> 20 Posts + 8 Reels</li><li><i class="fas fa-check"></i> Premium Graphic Design</li><li><i class="fas fa-check"></i> Daily Engagement</li><li><i class="fas fa-check"></i> Stories &amp; Carousels</li><li><i class="fas fa-check"></i> Hashtag Strategy</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Brand Authority</div><p class="pkg-desc">Full-scale social presence with influencer tie-ups and paid boost strategy.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> All Platforms</li><li><i class="fas fa-check"></i> 35 Posts + 15 Reels</li><li><i class="fas fa-check"></i> Video Production</li><li><i class="fas fa-check"></i> Influencer Outreach</li><li><i class="fas fa-check"></i> Ad Boost Strategy</li><li><i class="fas fa-check"></i> Weekly Reports</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="section-tag"><i class="fas fa-question-circle"></i> FAQ</div><h2 class="section-title">Common Questions</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q"><span>How soon will I see follower growth?</span><i class="fas fa-plus"></i></button><div class="faq-a">Most clients see consistent growth within 30-60 days. Significant results (viral content, rapid growth) come from consistent posting for 3+ months with proper strategy and niche targeting.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>Do you create the actual content or do I need to provide it?</span><i class="fas fa-plus"></i></button><div class="faq-a">We create all graphics, captions, and hashtag strategies. For product-based businesses we'll need some product photos from you. We can also guide your team on shooting effective raw video/photos.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>Will I have approval on content before it's posted?</span><i class="fas fa-plus"></i></button><div class="faq-a">Yes! We share a monthly content calendar for your approval. You can request changes and give final sign-off before anything goes live on your profiles.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>Can you manage my existing accounts?</span><i class="fas fa-plus"></i></button><div class="faq-a">Absolutely. We'll work with your existing accounts, review past performance, and implement an improved strategy that builds on what's working while fixing what isn't.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section inquiry-section" id="inquire">
+    <div class="container">
+      <div class="inquiry-wrapper">
+        <div class="inquiry-info">
+          <div class="section-tag"><i class="fas fa-share-nodes"></i> Free Strategy Call</div>
+          <h2>Let's Grow Your <span class="hl">Social Presence</span> Together</h2>
+          <p>Tell us about your brand and goals. Our social media strategists will prepare a custom content strategy for your business — free of charge.</p>
+          <ul class="check-list"><li><i class="fas fa-check-circle"></i> Platform audit of existing profiles</li><li><i class="fas fa-check-circle"></i> Custom content strategy document</li><li><i class="fas fa-check-circle"></i> Competitor social analysis</li><li><i class="fas fa-check-circle"></i> No-commitment free strategy call</li></ul>
+        </div>
+        <div class="form-card">
+          <h3>Get Your Free Social Strategy</h3><p>We'll respond within 24 hours.</p>
+          <form id="smForm">
+            <div class="form-row"><div class="fg"><label>Your Name *</label><input type="text" name="name" placeholder="Full name" required /></div><div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div></div>
+            <div class="fg"><label>Business Email *</label><input type="email" name="email" placeholder="name@company.com" required /></div>
+            <div class="fg"><label>Business / Brand Name *</label><input type="text" name="brand" placeholder="Your brand name" required /></div>
+            <div class="fg"><label>Industry</label><select name="industry"><option>Retail / E-Commerce</option><option>Food &amp; Restaurant</option><option>Fashion &amp; Lifestyle</option><option>Healthcare</option><option>Education</option><option>Real Estate</option><option>Technology</option><option>Other</option></select></div>
+            <div class="fg"><label>Platforms Needed</label><input type="text" name="platforms" placeholder="e.g. Instagram, Facebook, LinkedIn" /></div>
+            <button type="submit" class="btn-form"><i class="fas fa-paper-plane"></i> Submit — Get Free Strategy</button>
+            <div class="success-msg" id="sm-success" style="display:none;"><i class="fas fa-check-circle"></i><strong>Request Received! 🎉</strong><p style="font-size:0.85rem;color:#666;margin-top:6px">Our social media team will contact you within 24 hours.</p></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 Sai Shree Visionary Integrated Media. All rights reserved.</p><div class="footer-links"><a href="index.html">Home</a><a href="index.html#services">All Services</a><a href="index.html#contact">Contact</a></div></footer>
+  <script src="service-page.js"></script>
+  <script src="form-handler.js"></script>
+</body>
+</html>

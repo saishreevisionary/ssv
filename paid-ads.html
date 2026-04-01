@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Paid Advertising Services by SSV Integrated Media — Google Ads, Meta Ads, Lead Generation Campaigns that maximize ROI." />
+  <title>Paid Advertising Services | SSV Integrated Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+  <link rel="stylesheet" href="service-page.css" />
+  <style>
+    :root {
+      --accent:#ff6d00;--accent-dark:#e65100;
+      --hero-bg:linear-gradient(135deg,#080d1e 0%,#1a0a00 50%,#1a0d00 100%);
+    }
+    .hero-badge{background:rgba(255,109,0,0.1);border-color:rgba(255,109,0,0.3);color:#ff6d00;}
+    .hero-title span{background:linear-gradient(135deg,#ffb74d,#ff6d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 3px 8px rgba(255,109,0,0.4));}
+    .btn-primary{background:linear-gradient(135deg,#ff6d00,#e65100);color:#fff;box-shadow:0 5px 0 rgba(150,40,0,0.55),0 8px 25px rgba(255,109,0,0.35);}
+    .btn-secondary:hover{border-color:#ff6d00;color:#ff6d00;}
+    .stat-val{color:#ff8f00;text-shadow:0 2px 8px rgba(255,109,0,0.4);}
+    .section-tag{background:rgba(255,109,0,0.1);border-color:rgba(255,109,0,0.25);color:#ff6d00;}
+    .type-card::before{background:linear-gradient(90deg,#ff6d00,#1565c0);}
+    .type-card:hover{box-shadow:0 24px 60px rgba(255,109,0,0.15);}
+    .type-icon{background:linear-gradient(135deg,#ff6d00,#e65100);box-shadow:0 8px 24px rgba(255,109,0,0.3);}
+    .type-card:hover .type-icon{background:linear-gradient(135deg,#1565c0,#1976d2);box-shadow:0 8px 24px rgba(21,101,192,0.3);}
+    .tag{background:rgba(255,109,0,0.08);color:#e65100;}
+    .tech-section{background:linear-gradient(135deg,#080d1e,#1a0a00);}
+    .tech-item:hover{background:rgba(255,109,0,0.08);border-color:rgba(255,109,0,0.3);}
+    .tech-item i{color:#ff8f00;}
+    .pkg-card.featured{background:linear-gradient(135deg,#e65100,#bf360c);border-color:#ff6d00;box-shadow:0 24px 70px rgba(255,109,0,0.4);}
+    .pkg-card.featured .amount{color:#ffcc02!important;}
+    .pkg-label{color:#e65100;}
+    .pkg-features li i.fa-check{color:#e65100;}
+    .btn-pkg{border:2px solid #e65100;color:#e65100;}
+    .btn-pkg:hover{background:#e65100;color:#fff;}
+    .process-grid::before{background:linear-gradient(90deg,#ff6d00,#1565c0);}
+    .proc-icon{background:linear-gradient(135deg,#ff6d00,#e65100);box-shadow:0 8px 24px rgba(255,109,0,0.35);}
+    .faq-q:hover{color:#ff6d00;}
+    .inquiry-section{background:linear-gradient(135deg,#080d1e,#1a0a00);}
+    .hl{color:#ff8f00;}
+    .check-list i{color:#ff6d00;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#ff6d00;box-shadow:0 0 0 3px rgba(255,109,0,0.1);}
+    .btn-form{background:linear-gradient(135deg,#ff6d00,#e65100);color:#fff;box-shadow:0 5px 0 rgba(150,40,0,0.55),0 8px 25px rgba(255,109,0,0.35);}
+    .success-msg i{color:#ff6d00;}
+    .footer-links a:hover{color:#ff6d00;}
+    .fshape-1{border-color:rgba(255,109,0,0.4);}
+    .fshape-2{border-color:rgba(21,101,192,0.4);}
+    .fshape-3{background:radial-gradient(circle,rgba(255,109,0,0.2),transparent 70%);}
+    /* ROI Dashboard visual */
+    .roi-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:18px;backdrop-filter:blur(20px);box-shadow:20px 20px 60px rgba(0,0,0,0.5);transform:rotateY(-6deg) rotateX(3deg);}
+    .roi-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .roi-row:last-child{border-bottom:none;}
+    .roi-label{font-size:0.78rem;color:rgba(255,255,255,0.55);}
+    .roi-val{font-size:0.9rem;font-weight:800;}
+    .roi-change{font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:50px;}
+    .roi-change.up{color:#22c55e;background:rgba(34,197,94,0.1);}
+    .roi-change.great{color:#ff8f00;background:rgba(255,109,0,0.1);}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-pill"><img src="logo.png" alt="SSV Logo" /></div>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <a href="#inquire" class="nav-cta"><i class="fas fa-megaphone"></i> Get Free Ad Audit</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow hero-glow-1" style="background:rgba(255,109,0,0.1);top:-80px;right:-80px;"></div>
+    <div class="hero-glow hero-glow-2" style="background:rgba(21,101,192,0.15);bottom:-30px;left:5%;"></div>
+    <div class="fshape fshape-1"></div><div class="fshape fshape-2"></div><div class="fshape fshape-3"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge"><i class="fas fa-megaphone"></i> Paid Advertising</div>
+          <h1 class="hero-title">Maximum <span>ROI</span> from Every Rupee You Spend</h1>
+          <p class="hero-desc">We run laser-targeted Google, Meta, and YouTube ad campaigns that generate qualified leads, not just clicks — with full transparency and weekly performance reporting.</p>
+          <div class="hero-btns">
+            <a href="#inquire" class="btn-primary"><i class="fas fa-rocket"></i> Get Free Ad Audit</a>
+            <a href="#packages" class="btn-secondary"><i class="fas fa-tag"></i> View Packages</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="roi-card">
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-bottom:12px;font-weight:600;">📊 CAMPAIGN PERFORMANCE</div>
+            <div class="roi-row"><span class="roi-label">Ad Spend</span><span class="roi-val" style="color:#fff;">₹50,000</span><span class="roi-change great">This Month</span></div>
+            <div class="roi-row"><span class="roi-label">Revenue Generated</span><span class="roi-val" style="color:#ff8f00;">₹2,40,000</span><span class="roi-change up">↑ 380%</span></div>
+            <div class="roi-row"><span class="roi-label">Cost Per Lead</span><span class="roi-val" style="color:#22c55e;">₹85</span><span class="roi-change up">↓ 42% Lower</span></div>
+            <div class="roi-row"><span class="roi-label">ROAS</span><span class="roi-val" style="color:#ff8f00;">4.8x</span><span class="roi-change up">↑ from 2.1x</span></div>
+            <div class="roi-row"><span class="roi-label">Total Leads</span><span class="roi-val" style="color:#60a5fa;">588</span><span class="roi-change up">↑ 220</span></div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-mini"><div class="stat-val">4.8x</div><div class="stat-lbl">Avg ROAS</div></div>
+            <div class="stat-mini"><div class="stat-val">60+</div><div class="stat-lbl">Campaigns Live</div></div>
+            <div class="stat-mini"><div class="stat-val">₹2Cr+</div><div class="stat-lbl">Ad Spend Managed</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-layer-group"></i> Ad Services</div>
+        <h2 class="section-title">Full-Funnel Paid Advertising Solutions</h2>
+        <p class="section-desc">We manage every stage — from awareness to conversion — across the platforms where your customers spend time.</p>
+      </div>
+      <div class="types-grid">
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fab fa-google"></i></div><h3>Google Search &amp; Display Ads</h3><p>Capture high-intent buyers searching for your products/services on Google. Pay only when they click — maximum intent targeting.</p><div class="type-tags"><span class="tag">Search</span><span class="tag">Display</span><span class="tag">Shopping</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fab fa-meta"></i></div><h3>Meta (Facebook &amp; Instagram) Ads</h3><p>Reach millions of potential customers with interest and behavior-based targeting on Facebook and Instagram feeds, Reels, and Stories.</p><div class="type-tags"><span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">Reels Ads</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-user-check"></i></div><h3>Lead Generation Campaigns</h3><p>Capture qualified leads directly from Facebook, Instagram, and Google using optimized lead forms and landing pages.</p><div class="type-tags"><span class="tag">Lead Forms</span><span class="tag">Landing Pages</span><span class="tag">CRM</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-redo"></i></div><h3>Retargeting &amp; Remarketing</h3><p>Re-engage website visitors, cart abandoners, and past customers with personalized ads timed perfectly to convert them.</p><div class="type-tags"><span class="tag">Retargeting</span><span class="tag">Pixel</span><span class="tag">Custom Audience</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fab fa-youtube"></i></div><h3>YouTube Video Ads</h3><p>Showcase your brand with compelling video ads on YouTube — skippable, non-skippable, and bumper ad formats.</p><div class="type-tags"><span class="tag">YouTube</span><span class="tag">In-Stream</span><span class="tag">Bumper</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-shopping-bag"></i></div><h3>E-Commerce Ads (ROAS-Focused)</h3><p>Google Shopping, Dynamic Product Ads, and catalog ads for online stores focused on maximizing return on ad spend.</p><div class="type-tags"><span class="tag">Shopping</span><span class="tag">DPA</span><span class="tag">Catalog</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tech-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="background:rgba(255,109,0,0.1);border-color:rgba(255,109,0,0.25);color:var(--gold)"><i class="fas fa-tools"></i> Platforms &amp; Tools</div>
+        <h2 class="section-title light">Ad Platforms We Master</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item"><i class="fab fa-google"></i><span>Google Ads</span></div>
+        <div class="tech-item"><i class="fab fa-meta"></i><span>Meta Ads</span></div>
+        <div class="tech-item"><i class="fab fa-youtube" style="color:#ff0000;"></i><span>YouTube Ads</span></div>
+        <div class="tech-item"><i class="fab fa-linkedin" style="color:#0077b5;"></i><span>LinkedIn Ads</span></div>
+        <div class="tech-item"><i class="fas fa-chart-bar"></i><span>Google Analytics</span></div>
+        <div class="tech-item"><i class="fas fa-pixel-art" style="color:#1877f2;"></i><span>Meta Pixel</span></div>
+        <div class="tech-item"><i class="fas fa-tag"></i><span>Google Tag Manager</span></div>
+        <div class="tech-item"><i class="fas fa-funnel-dollar"></i><span>ClickFunnels</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-tag"></i> Packages</div>
+        <h2 class="section-title">Paid Advertising Management Packages</h2>
+        <p class="section-desc">All packages include ad account setup, creative design, A/B testing, and weekly performance reports. *Ad spend budget is separate.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Starter</div><p class="pkg-desc">For businesses starting with paid ads on 1 platform with up to ₹50K spend.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> 1 Platform (Google or Meta)</li><li><i class="fas fa-check"></i> Up to ₹50K Ad Spend</li><li><i class="fas fa-check"></i> Campaign Setup</li><li><i class="fas fa-check"></i> 2 Ad Creatives/month</li><li><i class="fas fa-check"></i> Monthly Report</li><li class="dim"><i class="fas fa-times"></i> Retargeting</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card featured" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.12"><div class="pkg-badge">⭐ Best ROI</div><div class="pkg-label">Performance</div><p class="pkg-desc">Multi-platform campaigns with retargeting and conversion-optimized creatives.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> Google + Meta Ads</li><li><i class="fas fa-check"></i> Up to ₹2L Ad Spend</li><li><i class="fas fa-check"></i> Retargeting Campaigns</li><li><i class="fas fa-check"></i> 6 Ad Creatives/month</li><li><i class="fas fa-check"></i> A/B Testing</li><li><i class="fas fa-check"></i> Weekly Reports + Calls</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Scale</div><p class="pkg-desc">Enterprise-grade ad management for aggressive scaling and full-funnel campaigns.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> All Platforms (Google, Meta, YouTube)</li><li><i class="fas fa-check"></i> Unlimited Ad Spend</li><li><i class="fas fa-check"></i> Full-Funnel Strategy</li><li><i class="fas fa-check"></i> 15+ Ad Creatives/month</li><li><i class="fas fa-check"></i> CRO &amp; Landing Pages</li><li><i class="fas fa-check"></i> Dedicated Ad Strategist</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="section-tag"><i class="fas fa-question-circle"></i> FAQ</div><h2 class="section-title">Paid Ads Questions Answered</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q"><span>What is the minimum budget needed for paid ads?</span><i class="fas fa-plus"></i></button><div class="faq-a">We recommend a minimum ad spend of ₹15,000–₹20,000/month for Google Ads and ₹10,000/month for Meta Ads to see meaningful results. A lower budget limits the learning phase and makes optimization harder.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>How quickly will I see results from paid ads?</span><i class="fas fa-plus"></i></button><div class="faq-a">You can see leads/results within the first few days of launching. However, campaigns typically need 2–4 weeks of data for the algorithm to fully optimize for the best-converting audiences.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>What is ROAS and what can I expect?</span><i class="fas fa-plus"></i></button><div class="faq-a">ROAS (Return on Ad Spend) measures revenue generated per rupee spent on ads. Our campaigns average 3–6x ROAS across industries, though this varies by product/service, margins, and market competition.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>Do you create the ad creatives (images/videos)?</span><i class="fas fa-plus"></i></button><div class="faq-a">Yes! Our packages include ad creative design — static images, carousels, and basic video ads. For premium video production, we offer add-on video ad packages.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>Is the management fee separate from ad spend?</span><i class="fas fa-plus"></i></button><div class="faq-a">Yes. Our package fee is for campaign management, strategy, creatives, and reporting. Your ad spend budget goes directly to Google/Meta and is separate from our fee.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section inquiry-section" id="inquire">
+    <div class="container">
+      <div class="inquiry-wrapper">
+        <div class="inquiry-info">
+          <div class="section-tag"><i class="fas fa-megaphone"></i> Free Ad Audit</div>
+          <h2>Start Getting <span class="hl">Qualified Leads</span> From Day 1</h2>
+          <p>Our certified ad experts will audit your current campaigns (or build the strategy from scratch) and show you exactly where your ad spend can generate maximum ROI.</p>
+          <ul class="check-list"><li><i class="fas fa-check-circle"></i> Free audit of existing ad accounts</li><li><i class="fas fa-check-circle"></i> Competitor ad intelligence report</li><li><i class="fas fa-check-circle"></i> Custom campaign strategy</li><li><i class="fas fa-check-circle"></i> Estimated ROI projection</li></ul>
+        </div>
+        <div class="form-card">
+          <h3>Get Your Free Ad Audit</h3><p>We'll respond within 24 hours.</p>
+          <form id="adsForm">
+            <div class="form-row"><div class="fg"><label>Your Name *</label><input type="text" name="name" placeholder="Full name" required /></div><div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div></div>
+            <div class="fg"><label>Business Email *</label><input type="email" name="email" placeholder="name@company.com" required /></div>
+            <div class="fg"><label>Website URL</label><input type="url" name="website" placeholder="https://yoursite.com" /></div>
+            <div class="fg"><label>Monthly Ad Budget</label><select name="budget"><option>Under ₹20,000</option><option>₹20,000 – ₹50,000</option><option>₹50,000 – ₹2,00,000</option><option>₹2,00,000+</option><option>Not started yet</option></select></div>
+            <div class="fg"><label>Ad Platforms of Interest</label><input type="text" name="platforms" placeholder="e.g. Google, Facebook, Instagram, YouTube" /></div>
+            <div class="fg"><label>Business Goal</label><select name="goal"><option>Generate more leads</option><option>Increase online sales</option><option>Brand awareness</option><option>App installs</option><option>Local store visits</option></select></div>
+            <button type="submit" class="btn-form"><i class="fas fa-rocket"></i> Get My Free Ad Audit</button>
+            <div class="success-msg" id="ads-success" style="display:none;"><i class="fas fa-check-circle"></i><strong>Request Received! 🎉</strong><p style="font-size:0.85rem;color:#666;margin-top:6px">Our ads team will contact you within 24 hours.</p></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 Sai Shree Visionary Integrated Media. All rights reserved.</p><div class="footer-links"><a href="index.html">Home</a><a href="index.html#services">All Services</a><a href="index.html#contact">Contact</a></div></footer>
+  <script src="service-page.js"></script>
+  <script src="form-handler.js"></script>
+</body>
+</html>

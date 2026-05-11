@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium Logo & Brand Design Services by SSV Integrated Media — Visual identities that define and differentiate your business." />
+  <title>Logo & Brand Design | SSV Integrated Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+  <link rel="stylesheet" href="service-page.css" />
+  <style>
+    :root {
+      --accent:#ffab00; --accent-dark:#e65100;
+      --hero-bg:linear-gradient(135deg,#080d1e 0%,#1e1508 50%,#100905 100%);
+    }
+    .hero-badge{background:rgba(255,171,0,0.1);border-color:rgba(255,171,0,0.3);color:#ffab00;}
+    .hero-title span{background:linear-gradient(135deg,#ffe57f,#ffab00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 3px 8px rgba(255,171,0,0.4));}
+    .btn-primary{background:linear-gradient(135deg,#ffab00,#e65100);color:#000;box-shadow:0 5px 0 rgba(180,80,0,0.55),0 8px 25px rgba(255,171,0,0.35);font-weight:700;}
+    .btn-secondary:hover{border-color:#ffab00;color:#ffab00;}
+    .stat-val{color:#ffab00;text-shadow:0 2px 8px rgba(255,171,0,0.4);}
+    .section-tag{background:rgba(255,171,0,0.1);border-color:rgba(255,171,0,0.25);color:#ffab00;}
+    .type-card::before{background:linear-gradient(90deg,#ffab00,#ff6d00);}
+    .type-card:hover{box-shadow:0 24px 60px rgba(255,171,0,0.15);}
+    .type-icon{background:linear-gradient(135deg,#ffab00,#e65100);box-shadow:0 8px 24px rgba(255,171,0,0.3);}
+    .type-card:hover .type-icon{background:linear-gradient(135deg,#ff6d00,#dd2c00);box-shadow:0 8px 24px rgba(255,109,0,0.3);}
+    .tag{background:rgba(255,171,0,0.08);color:#e65100;}
+    .tech-section{background:linear-gradient(135deg,#080d1e,#1e1508);}
+    .tech-item:hover{background:rgba(255,171,0,0.08);border-color:rgba(255,171,0,0.3);}
+    .tech-item i{color:#ffab00;}
+    .pkg-card.featured{background:linear-gradient(135deg,#e65100,#bf360c);border-color:#ffab00;box-shadow:0 24px 70px rgba(255,171,0,0.35);}
+    .pkg-card.featured .amount{color:#ffe57f!important;}
+    .pkg-card.featured .pkg-label{color:#fff!important;}
+    .pkg-label{color:#e65100;}
+    .pkg-features li i.fa-check{color:#e65100;}
+    .btn-pkg{border:2px solid #e65100;color:#e65100;}
+    .btn-pkg:hover{background:#e65100;color:#fff;}
+    .process-grid::before{background:linear-gradient(90deg,#ffab00,#ff6d00);}
+    .proc-icon{background:linear-gradient(135deg,#ffab00,#e65100);box-shadow:0 8px 24px rgba(255,171,0,0.35);}
+    .faq-q:hover{color:#ffab00;}
+    .inquiry-section{background:linear-gradient(135deg,#080d1e,#1e1508);}
+    .hl{color:#ffab00;}
+    .check-list i{color:#ffab00;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#ffab00;box-shadow:0 0 0 3px rgba(255,171,0,0.1);}
+    .btn-form{background:linear-gradient(135deg,#ffab00,#e65100);color:#000;box-shadow:0 5px 0 rgba(180,80,0,0.55),0 8px 25px rgba(255,171,0,0.35);font-weight:700;}
+    .success-msg i{color:#ffab00;}
+    .footer-links a:hover{color:#ffab00;}
+    .fshape-1{border-color:rgba(255,171,0,0.3);}
+    .fshape-2{border-color:rgba(255,109,0,0.3);}
+    .fshape-3{background:radial-gradient(circle,rgba(255,171,0,0.15),transparent 70%);}
+    /* Brand board Visual */
+    .brand-board{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:22px;backdrop-filter:blur(20px);box-shadow:20px 20px 60px rgba(0,0,0,0.5);transform:rotateY(-6deg) rotateX(3deg);display:flex;flex-direction:column;gap:15px;}
+    .b-logo-area{height:90px;background:rgba(0,0,0,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+    .b-logo-icon{font-size:2.8rem;color:#ffab00;filter:drop-shadow(0 0 15px rgba(255,171,0,0.5));}
+    .b-palettes{display:flex;gap:8px;}
+    .b-dot{flex:1;height:24px;border-radius:6px;}
+    .b-typo{font-family:'Playfair Display', serif;font-size:1.1rem;font-weight:800;color:#fff;letter-spacing:1px;}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-pill"><img src="logo.png" alt="SSV Logo" /></div>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <a href="#inquire" class="nav-cta"><i class="fas fa-pen-nib"></i> Book Free Consultation</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow hero-glow-1" style="background:rgba(255,171,0,0.12);top:-80px;right:-80px;"></div>
+    <div class="hero-glow hero-glow-2" style="background:rgba(255,109,0,0.1);bottom:-30px;left:5%;"></div>
+    <div class="fshape fshape-1"></div><div class="fshape fshape-2"></div><div class="fshape fshape-3"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge"><i class="fas fa-bezier-curve"></i> Brand Identity Design</div>
+          <h1 class="hero-title">Design an Identity That <span>Demands Attention</span></h1>
+          <p class="hero-desc">A great logo isn't just art — it's a strategy. We craft unforgettable visual identities and logos that tell your brand story at a single glance.</p>
+          <div class="hero-btns">
+            <a href="#inquire" class="btn-primary"><i class="fas fa-rocket"></i> Start Branding Now</a>
+            <a href="#packages" class="btn-secondary"><i class="fas fa-tag"></i> View Packages</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="brand-board">
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1px;">VISUAL IDENTITY SYSTEM</div>
+            <div class="b-logo-area">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);background-size: 10px 10px;"></div>
+              <i class="fas fa-gem b-logo-icon"></i>
+            </div>
+            <div class="b-typo">A B C D E F G H I J</div>
+            <div class="b-palettes">
+              <div class="b-dot" style="background:#ffab00;"></div>
+              <div class="b-dot" style="background:#ff6d00;"></div>
+              <div class="b-dot" style="background:#212121;"></div>
+              <div class="b-dot" style="background:#eeeeee;"></div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-mini"><div class="stat-val">300+</div><div class="stat-lbl">Logos Made</div></div>
+            <div class="stat-mini"><div class="stat-val">100%</div><div class="stat-lbl">Original Art</div></div>
+            <div class="stat-mini"><div class="stat-val">24h</div><div class="stat-lbl">Concept Deliv.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-compass-drafting"></i> Design Disciplines</div>
+        <h2 class="section-title">Total Creative Visualization</h2>
+        <p class="section-desc">More than just a shape — we define colors, fonts, imagery style and usage guides that create absolute brand consistency.</p>
+      </div>
+      <div class="types-grid">
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-wand-magic-sparkles"></i></div><h3>Minimalist Logo Concepts</h3><p>Sleek, modern, and adaptable logos that speak volumes through simplicity and geometric precision.</p><div class="type-tags"><span class="tag">Modern</span><span class="tag">Geometric</span><span class="tag">Clean</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-file-invoice"></i></div><h3>Brand Style Guidelines</h3><p>A complete bible outlining typography, color palettes, spacing, and rules to ensure uniformity everywhere.</p><div class="type-tags"><span class="tag">Color Codes</span><span class="tag">Typography</span><span class="tag">PDF</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-address-card"></i></div><h3>Corporate Stationery</h3><p>Matching business cards, letterheads, envelopes, and email signatures that exude professionalism.</p><div class="type-tags"><span class="tag">Cards</span><span class="tag">Letterheads</span><span class="tag">Invoices</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-photo-film"></i></div><h3>Social Media Branding</h3><p>Optimized avatars, banner art, covers, and reusable templates ready to plug into your digital profiles.</p><div class="type-tags"><span class="tag">Banners</span><span class="tag">DPs</span><span class="tag">Templates</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-boxes-packing"></i></div><h3>Product & Packaging Design</h3><p>Eye-catching boxes, labels, wrappers and bags that grab attention on physical and virtual shelves.</p><div class="type-tags"><span class="tag">Label</span><span class="tag">Boxes</span><span class="tag">Mockups</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-vector-square"></i></div><h3>Vectorization & Redesign</h3><p>Upgrade outdated artwork into crystal-clear scalable vector formats (Ai/EPS/SVG) suitable for massive billbaords.</p><div class="type-tags"><span class="tag">Scalable</span><span class="tag">HD Print</span><span class="tag">Remake</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tech-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="background:rgba(255,171,0,0.1);border-color:rgba(255,171,0,0.25);color:#ffab00"><i class="fas fa-pen-ruler"></i> Software We Use</div>
+        <h2 class="section-title light">Industry-Standard Design Stack</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item"><i class="fab fa-figma" style="color:#f24e1e;"></i><span>Figma</span></div>
+        <div class="tech-item"><i class="fas fa-palette" style="color:#ff9a00;"></i><span>Adobe Illustrator</span></div>
+        <div class="tech-item"><i class="fas fa-camera-retro" style="color:#31a8ff;"></i><span>Photoshop</span></div>
+        <div class="tech-item"><i class="fas fa-shapes" style="color:#7c4dff;"></i><span>InDesign</span></div>
+        <div class="tech-item"><i class="fas fa-draw-polygon" style="color:#00c853;"></i><span>CorelDraw</span></div>
+        <div class="tech-item"><i class="fas fa-play-circle" style="color:#d32f2f;"></i><span>After Effects</span></div>
+        <div class="tech-item"><i class="fas fa-cube" style="color:#ffab00;"></i><span>Blender (3D)</span></div>
+        <div class="tech-item"><i class="fas fa-font" style="color:#fff;"></i><span>Google Fonts</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-tag"></i> Pricing</div>
+        <h2 class="section-title">Design Packages</h2>
+        <p class="section-desc">Flexible bundles ranging from core logo files to complete multi-channel corporate identity kits.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Basic Kit</div><p class="pkg-desc">Great for startups needing a high-res, professional mark to get launched.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> 2 Unique Logo Concepts</li><li><i class="fas fa-check"></i> JPG/PNG High Res Files</li><li><i class="fas fa-check"></i> 3 Revisions Included</li><li><i class="fas fa-check"></i> Vector Source File (.AI)</li><li class="dim"><i class="fas fa-times"></i> Stationery Design</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card featured" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.12"><div class="pkg-badge">⭐ Recommended</div><div class="pkg-label">Standard Brand Pack</div><p class="pkg-desc">Our signature complete kit for professional cohesion across web and physical mediums.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> 4 Creative Concepts</li><li><i class="fas fa-check"></i> Unlimited Revisions</li><li><i class="fas fa-check"></i> Social Media Kit</li><li><i class="fas fa-check"></i> Stationery (Card + Letterhead)</li><li><i class="fas fa-check"></i> All Source Formats</li><li><i class="fas fa-check"></i> 3D Realistic Mockups</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Corporate Elite</div><p class="pkg-desc">Complete enterprise ecosystem covering everything from guideline booklets to motion logos.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> 6 Initial Concepts</li><li><i class="fas fa-check"></i> Detailed Brand Guideline Book</li><li><i class="fas fa-check"></i> Logo Animation (Intro)</li><li><i class="fas fa-check"></i> Full Pack of Digital Assets</li><li><i class="fas fa-check"></i> 3D Render/Packaging</li><li><i class="fas fa-check"></i> IP Copyright Transfer</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="section-tag"><i class="fas fa-circle-question"></i> Questions</div><h2 class="section-title">Branding FAQ</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q"><span>Will I own full rights to my new logo?</span><i class="fas fa-plus"></i></button><div class="faq-a">Yes, absolutely. Upon project completion and full payment, complete intellectual property rights transfer to you. You own 100% of the final design.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>What format will I receive the logo files in?</span><i class="fas fa-plus"></i></button><div class="faq-a">We provide you with highly editable industry-standard vector formats including AI (Illustrator), EPS, and SVG, alongside high-resolution raster formats like PNG (transparent) and JPEG.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>What if I don't like the initial concepts?</span><i class="fas fa-plus"></i></button><div class="faq-a">We conduct an in-depth discovery session before sketching to fully grasp your taste. If you aren't thrilled, we use your feedback on the concepts to iterate or generate fresh perspectives depending on your package terms.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section inquiry-section" id="inquire">
+    <div class="container">
+      <div class="inquiry-wrapper">
+        <div class="inquiry-info">
+          <div class="section-tag"><i class="fas fa-lightbulb"></i> Free Concept Brief</div>
+          <h2>Bring Your Ideas to <span class="hl">Life</span></h2>
+          <p>Ready to define your vision? Share your story with our creative director and get custom proposals for your brand identity.</p>
+          <ul class="check-list"><li><i class="fas fa-check-circle"></i> Creative brainstorm call</li><li><i class="fas fa-check-circle"></i> Tone & Moodboard mapping</li><li><i class="fas fa-check-circle"></i> Competitor visual survey</li><li><i class="fas fa-check-circle"></i> Transparent project timeline</li></ul>
+        </div>
+        <div class="form-card">
+          <h3>Tell Us Your Vision</h3><p>We'll respond within 24 hours.</p>
+          <form id="logoForm">
+            <div class="form-row"><div class="fg"><label>Name *</label><input type="text" name="name" placeholder="Full name" required /></div><div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div></div>
+            <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="name@company.com" required /></div>
+            <div class="fg"><label>Company Name</label><input type="text" name="company" placeholder="What text goes on the logo?" required /></div>
+            <div class="fg"><label>Preferred Style</label><select name="style"><option>Minimal / Simple</option><option>Vintage / Classic</option><option>3D / Modern</option><option>Mascot / Illustrative</option><option>Not sure yet</option></select></div>
+            <button type="submit" class="btn-form"><i class="fas fa-pencil-ruler"></i> Start Design Project</button>
+            <div class="success-msg" id="logo-success" style="display:none;"><i class="fas fa-check-circle"></i><strong>Brief Received! 🎉</strong><p style="font-size:0.85rem;color:#666;margin-top:6px">Our creative director will reach out soon.</p></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 Sai Shree Visionary Integrated Media. All rights reserved.</p><div class="footer-links"><a href="index.html">Home</a><a href="index.html#services">All Services</a><a href="index.html#contact">Contact</a></div></footer>
+  <script src="service-page.js"></script>
+  <script src="form-handler.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Custom CRM Solutions by SSV Integrated Media — Streamline sales, automate operations, and maximize customer lifetime value." />
+  <title>CRM Solutions | SSV Integrated Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+  <link rel="stylesheet" href="service-page.css" />
+  <style>
+    :root {
+      --accent:#2962ff;--accent-dark:#0d47a1;
+      --hero-bg:linear-gradient(135deg,#080d1e 0%,#081a36 50%,#051024 100%);
+    }
+    .hero-badge{background:rgba(41,98,255,0.1);border-color:rgba(41,98,255,0.3);color:#448aff;}
+    .hero-title span{background:linear-gradient(135deg,#82b1ff,#2962ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 3px 8px rgba(41,98,255,0.4));}
+    .btn-primary{background:linear-gradient(135deg,#2962ff,#0d47a1);color:#fff;box-shadow:0 5px 0 rgba(10,50,150,0.55),0 8px 25px rgba(41,98,255,0.35);}
+    .btn-secondary:hover{border-color:#2962ff;color:#2962ff;}
+    .stat-val{color:#448aff;text-shadow:0 2px 8px rgba(41,98,255,0.4);}
+    .section-tag{background:rgba(41,98,255,0.1);border-color:rgba(41,98,255,0.25);color:#448aff;}
+    .type-card::before{background:linear-gradient(90deg,#2962ff,#7c3aed);}
+    .type-card:hover{box-shadow:0 24px 60px rgba(41,98,255,0.15);}
+    .type-icon{background:linear-gradient(135deg,#2962ff,#0d47a1);box-shadow:0 8px 24px rgba(41,98,255,0.3);}
+    .type-card:hover .type-icon{background:linear-gradient(135deg,#7c3aed,#5b21b6);box-shadow:0 8px 24px rgba(124,58,237,0.3);}
+    .tag{background:rgba(41,98,255,0.08);color:#0d47a1;}
+    .tech-section{background:linear-gradient(135deg,#080d1e,#081a36);}
+    .tech-item:hover{background:rgba(41,98,255,0.08);border-color:rgba(41,98,255,0.3);}
+    .tech-item i{color:#448aff;}
+    .pkg-card.featured{background:linear-gradient(135deg,#0d47a1,#0a2f6e);border-color:#2962ff;box-shadow:0 24px 70px rgba(41,98,255,0.4);}
+    .pkg-card.featured .amount{color:#82b1ff!important;}
+    .pkg-label{color:#0d47a1;}
+    .pkg-features li i.fa-check{color:#0d47a1;}
+    .btn-pkg{border:2px solid #0d47a1;color:#0d47a1;}
+    .btn-pkg:hover{background:#0d47a1;color:#fff;}
+    .process-grid::before{background:linear-gradient(90deg,#2962ff,#7c3aed);}
+    .proc-icon{background:linear-gradient(135deg,#2962ff,#0d47a1);box-shadow:0 8px 24px rgba(41,98,255,0.35);}
+    .faq-q:hover{color:#2962ff;}
+    .inquiry-section{background:linear-gradient(135deg,#080d1e,#081a36);}
+    .hl{color:#448aff;}
+    .check-list i{color:#2962ff;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#2962ff;box-shadow:0 0 0 3px rgba(41,98,255,0.1);}
+    .btn-form{background:linear-gradient(135deg,#2962ff,#0d47a1);color:#fff;box-shadow:0 5px 0 rgba(10,50,150,0.55),0 8px 25px rgba(41,98,255,0.35);}
+    .success-msg i{color:#2962ff;}
+    .footer-links a:hover{color:#2962ff;}
+    .fshape-1{border-color:rgba(41,98,255,0.4);}
+    .fshape-2{border-color:rgba(124,58,237,0.4);}
+    .fshape-3{background:radial-gradient(circle,rgba(41,98,255,0.2),transparent 70%);}
+    /* CRM Dashboard visual */
+    .crm-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:18px;backdrop-filter:blur(20px);box-shadow:20px 20px 60px rgba(0,0,0,0.5);transform:rotateY(-6deg) rotateX(3deg);}
+    .crm-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .crm-row:last-child{border-bottom:none;}
+    .crm-label{font-size:0.78rem;color:rgba(255,255,255,0.55);}
+    .crm-val{font-size:0.9rem;font-weight:800;}
+    .crm-status{font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:50px;}
+    .crm-status.good{color:#22c55e;background:rgba(34,197,94,0.1);}
+    .crm-status.alert{color:#ffa726;background:rgba(255,167,38,0.1);}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-pill"><img src="logo.png" alt="SSV Logo" /></div>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <a href="#inquire" class="nav-cta"><i class="fas fa-users-gear"></i> Free CRM Consultation</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow hero-glow-1" style="background:rgba(41,98,255,0.1);top:-80px;right:-80px;"></div>
+    <div class="hero-glow hero-glow-2" style="background:rgba(124,58,237,0.15);bottom:-30px;left:5%;"></div>
+    <div class="fshape fshape-1"></div><div class="fshape fshape-2"></div><div class="fshape fshape-3"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge"><i class="fas fa-users-gear"></i> CRM Solutions</div>
+          <h1 class="hero-title">Supercharge Sales & Operations with Custom <span>CRM Systems</span></h1>
+          <p class="hero-desc">Stop losing leads in spreadsheets. We implement unified CRM solutions that automate follow-ups, streamline your sales pipeline, and boost team efficiency.</p>
+          <div class="hero-btns">
+            <a href="#inquire" class="btn-primary"><i class="fas fa-rocket"></i> Get Free Consultation</a>
+            <a href="#packages" class="btn-secondary"><i class="fas fa-tag"></i> View Packages</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="crm-card">
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-bottom:12px;font-weight:600;">💼 SALES PIPELINE STATUS</div>
+            <div class="crm-row"><span class="crm-label">Total Active Leads</span><span class="crm-val" style="color:#fff;">1,450</span><span class="crm-status good">↑ 24%</span></div>
+            <div class="crm-row"><span class="crm-label">Open Deals Value</span><span class="crm-val" style="color:#448aff;">₹42,50,000</span><span class="crm-status good">Healthy</span></div>
+            <div class="crm-row"><span class="crm-label">Avg. Response Time</span><span class="crm-val" style="color:#22c55e;">12 Mins</span><span class="crm-status good">↓ Fast</span></div>
+            <div class="crm-row"><span class="crm-label">Workflow Automations</span><span class="crm-val" style="color:#fff;">25 Active</span><span class="crm-status good">Running</span></div>
+            <div class="crm-row"><span class="crm-label">Retention Rate</span><span class="crm-val" style="color:#448aff;">88%</span><span class="crm-status good">↑ 12%</span></div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-mini"><div class="stat-val">40%</div><div class="stat-lbl">More Sales ↑</div></div>
+            <div class="stat-mini"><div class="stat-val">25h+</div><div class="stat-lbl">Saved / Week</div></div>
+            <div class="stat-mini"><div class="stat-val">100%</div><div class="stat-lbl">Data Visibility</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-cubes"></i> Core Features</div>
+        <h2 class="section-title">End-to-End CRM Strategy & Deployment</h2>
+        <p class="section-desc">We don't just install software; we map your unique business processes and configure the perfect tool to maximize productivity.</p>
+      </div>
+      <div class="types-grid">
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-filter"></i></div><h3>Pipeline & Lead Tracking</h3><p>Visualize your complete sales journey. Never let a warm prospect slip through the cracks with drag-and-drop visual boards.</p><div class="type-tags"><span class="tag">Deals</span><span class="tag">Lead Scoring</span><span class="tag">Tracking</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-robot"></i></div><h3>Workflow Automation</h3><p>Set repetitive tasks on autopilot — auto-assign leads, trigger email sequences, and get automatic task reminders.</p><div class="type-tags"><span class="tag">Triggers</span><span class="tag">Email Automation</span><span class="tag">Alerts</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-plug"></i></div><h3>Seamless Integrations</h3><p>Connect your CRM with your Website, WhatsApp, Email, and Accounting software for a true 360° view of customer operations.</p><div class="type-tags"><span class="tag">API</span><span class="tag">WhatsApp</span><span class="tag">Websites</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-chart-pie"></i></div><h3>Advanced Analytics</h3><p>Make data-driven decisions with intuitive real-time dashboards monitoring team performance and sales forecasts.</p><div class="type-tags"><span class="tag">Reporting</span><span class="tag">ROI</span><span class="tag">KPIS</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-id-card-clip"></i></div><h3>Customer Support Modules</h3><p>Deliver exceptional service post-sale with integrated support tickets, knowledge bases, and SLA tracking.</p><div class="type-tags"><span class="tag">Ticketing</span><span class="tag">Service</span><span class="tag">Feedback</span></div></div>
+        <div class="type-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.1"><div class="type-icon"><i class="fas fa-mobile-screen-button"></i></div><h3>Mobile-First Accessibility</h3><p>Enable your field staff to access client histories, update deal stages, and log activities directly from mobile apps.</p><div class="type-tags"><span class="tag">iOS & Android</span><span class="tag">Remote</span><span class="tag">Logging</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tech-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="background:rgba(41,98,255,0.1);border-color:rgba(41,98,255,0.25);color:#448aff"><i class="fas fa-tools"></i> CRM Platforms</div>
+        <h2 class="section-title light">Platforms We Customize & Support</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item"><i class="fab fa-hubspot" style="color:#ff7a59;"></i><span>HubSpot</span></div>
+        <div class="tech-item"><i class="fas fa-cloud" style="color:#00a1e0;"></i><span>Salesforce</span></div>
+        <div class="tech-item"><i class="fas fa-cube" style="color:#d82f27;"></i><span>Zoho CRM</span></div>
+        <div class="tech-item"><i class="fas fa-leaf" style="color:#00cf8a;"></i><span>Pipedrive</span></div>
+        <div class="tech-item"><i class="fas fa-table-columns" style="color:#6161ff;"></i><span>Monday.com</span></div>
+        <div class="tech-item"><i class="fab fa-whatsapp" style="color:#25d366;"></i><span>WhatsApp CRM</span></div>
+        <div class="tech-item"><i class="fas fa-bolt" style="color:#ff4a00;"></i><span>Zapier</span></div>
+        <div class="tech-item"><i class="fas fa-envelope-open-text"></i><span>ActiveCampaign</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-tag"></i> Packages</div>
+        <h2 class="section-title">CRM Implementation Packages</h2>
+        <p class="section-desc">Tailored deployment plans from core setup to fully automated enterprise custom integrations.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Essential Setup</div><p class="pkg-desc">Perfect for SMBs needing organized contact & deal management without the clutter.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> Account Configuration</li><li><i class="fas fa-check"></i> Data Import (Spreadsheets)</li><li><i class="fas fa-check"></i> 1 Custom Pipeline Setup</li><li><i class="fas fa-check"></i> Basic Web-to-Lead Form</li><li><i class="fas fa-check"></i> 1 Hour Team Training</li><li class="dim"><i class="fas fa-times"></i> Workflow Automation</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card featured" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.12"><div class="pkg-badge">⭐ Most Popular</div><div class="pkg-label">Growth Pack</div><p class="pkg-desc">Fully automated setup designed to significantly scale revenue and productivity.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> 3+ Automated Workflows</li><li><i class="fas fa-check"></i> Multi-Channel Integrations</li><li><i class="fas fa-check"></i> Custom Deal & Contact Stages</li><li><i class="fas fa-check"></i> Real-Time Analytics Dashboard</li><li><i class="fas fa-check"></i> WhatsApp Integration</li><li><i class="fas fa-check"></i> 4 Hours Training & Support</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+        <div class="pkg-card" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.08"><div class="pkg-label">Enterprise</div><p class="pkg-desc">Deeply integrated ecosystem linking marketing, sales, support and finance tools.</p><ul class="pkg-features"><li><i class="fas fa-check"></i> Full-Cycle CRM Consultation</li><li><i class="fas fa-check"></i> Custom API Integrations</li><li><i class="fas fa-check"></i> Advanced User Hierarchy</li><li><i class="fas fa-check"></i> Enterprise Reports & Forecasting</li><li><i class="fas fa-check"></i> Post-Go-Live Maintenance</li><li><i class="fas fa-check"></i> Dedicated CRM Strategist</li></ul><a href="#inquire" class="btn-pkg"><i class="fas fa-rocket"></i> Get Started</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="section-tag"><i class="fas fa-question-circle"></i> FAQ</div><h2 class="section-title">CRM Implementation FAQ</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q"><span>Which CRM is best for my business?</span><i class="fas fa-plus"></i></button><div class="faq-a">It depends heavily on your industry and team size. HubSpot is great for overall ease-of-use, Zoho is highly cost-effective for growing teams, and Salesforce excels in deep customization for large enterprises. We help you evaluate before choosing.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>Can you migrate our existing data into the new CRM?</span><i class="fas fa-plus"></i></button><div class="faq-a">Yes. We handle historical data clean-ups and migration mapping from Excel, CSV, or other legacy software systems safely and securely.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>How long does an implementation take?</span><i class="fas fa-plus"></i></button><div class="faq-a">Basic setups typically take 1-2 weeks. Advanced enterprise implementations involving complex logic and custom integrations might take 4-6 weeks.</div></div>
+        <div class="faq-item"><button class="faq-q"><span>Do you offer ongoing support after setup?</span><i class="fas fa-plus"></i></button><div class="faq-a">Yes, we offer monthly AMC (Annual Maintenance Contract) support for tweaking configurations, adding new automation steps, and assisting users with daily tasks.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section inquiry-section" id="inquire">
+    <div class="container">
+      <div class="inquiry-wrapper">
+        <div class="inquiry-info">
+          <div class="section-tag"><i class="fas fa-chart-line"></i> Free Consultation</div>
+          <h2>Get a Free CRM Audit & <span class="hl">Process Mapping</span></h2>
+          <p>Our solutions architect will audit your current business flow and propose exactly how a CRM can eliminate bottlenecks in your workflow.</p>
+          <ul class="check-list"><li><i class="fas fa-check-circle"></i> Existing process bottleneck audit</li><li><i class="fas fa-check-circle"></i> Best CRM platform recommendation</li><li><i class="fas fa-check-circle"></i> Custom data mapping blueprint</li><li><i class="fas fa-check-circle"></i> Implementation timeline projection</li></ul>
+        </div>
+        <div class="form-card">
+          <h3>Request Free Consultation</h3><p>We'll respond within 24 hours.</p>
+          <form id="crmForm">
+            <div class="form-row"><div class="fg"><label>Your Name *</label><input type="text" name="name" placeholder="Full name" required /></div><div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div></div>
+            <div class="fg"><label>Business Email *</label><input type="email" name="email" placeholder="name@company.com" required /></div>
+            <div class="fg"><label>Company Size</label><select name="size"><option>1 - 10 employees</option><option>11 - 50 employees</option><option>51 - 200 employees</option><option>200+ employees</option></select></div>
+            <div class="fg"><label>Are you currently using a CRM?</label><select name="current"><option>No, using Spreadsheets</option><option>Yes, looking to switch</option><option>Yes, looking to optimize</option></select></div>
+            <button type="submit" class="btn-form"><i class="fas fa-rocket"></i> Get My Free Consultation</button>
+            <div class="success-msg" id="crm-success" style="display:none;"><i class="fas fa-check-circle"></i><strong>Request Received! 🎉</strong><p style="font-size:0.85rem;color:#666;margin-top:6px">Our solutions architect will contact you within 24 hours.</p></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 Sai Shree Visionary Integrated Media. All rights reserved.</p><div class="footer-links"><a href="index.html">Home</a><a href="index.html#services">All Services</a><a href="index.html#contact">Contact</a></div></footer>
+  <script src="service-page.js"></script>
+  <script src="form-handler.js"></script>
+</body>
+</html>

@@ -20,7 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.setAttribute('aria-expanded', isOpen);
   });
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      if (link.classList.contains('nav-dropdown-toggle')) {
+        e.preventDefault();
+        const parent = link.closest('.nav-item-dropdown');
+        if (parent) parent.classList.toggle('open');
+        return;
+      }
       navLinks.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');

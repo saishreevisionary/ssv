@@ -896,43 +896,397 @@
   gap: 12px;
 }
 
-/* RESPONSIVE DESIGN */
+/* =====================================================
+   RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
+   ===================================================== */
+
+/* Tablets (1024px and below) */
 @media (max-width: 1024px) {
   .trust-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
   .all-services-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
   .related-practices-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .deliverables-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .strategic-roadmap-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
   .ai-dropdown-menu {
     width: 480px;
   }
+  nav {
+    padding: 12px 24px;
+  }
+  .logo-pill {
+    height: 60px;
+    width: 110px;
+  }
 }
 
+/* Medium Tablets & Mobile Phones (768px and below) */
 @media (max-width: 768px) {
-  .deliverables-grid {
-    grid-template-columns: 1fr;
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
-  .strategic-roadmap-grid {
-    grid-template-columns: 1fr;
+
+  /* Global Section & Container */
+  .section {
+    padding: 60px 0;
   }
+  .container {
+    padding: 0 18px;
+  }
+
+  /* Navigation Bar */
+  nav {
+    padding: 10px 16px;
+    height: auto;
+    min-height: 62px;
+    gap: 10px;
+  }
+  .logo-pill {
+    height: 44px;
+    width: 80px;
+    flex-shrink: 0;
+  }
+  .logo-pill img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .ai-top-nav-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .back-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    border-radius: 50px;
+  }
+  .nav-cta {
+    padding: 7px 14px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding-top: 86px;
+    padding-bottom: 40px;
+  }
+  .ai-back-pill {
+    font-size: 0.78rem;
+    padding: 6px 14px;
+    margin-bottom: 16px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-badge {
+    font-size: 0.76rem;
+    padding: 6px 14px;
+    margin-bottom: 14px;
+  }
+  .ai-hero-title {
+    font-size: clamp(2rem, 6.5vw, 2.7rem);
+    line-height: 1.18;
+    margin-bottom: 14px;
+    word-break: break-word;
+  }
+  .ai-hero-desc {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .ai-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 34px;
+  }
+  .btn-ai-primary,
+  .btn-ai-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 13px 20px;
+    font-size: 0.92rem;
+  }
+
+  /* Trust Badges Grid */
   .trust-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 6px;
   }
+  .trust-card {
+    padding: 16px 14px;
+    gap: 14px;
+    border-radius: 14px;
+  }
+  .trust-icon-box {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .trust-text h4 {
+    font-size: 0.92rem;
+  }
+  .trust-text p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  /* Core Deliverables Grid */
+  .deliverables-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .deliverable-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+  .deliverable-top {
+    margin-bottom: 14px;
+  }
+  .deliverable-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+  .deliverable-num {
+    font-size: 1rem;
+  }
+  .deliverable-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .deliverable-subtitle {
+    font-size: 0.86rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .deliverable-badges {
+    gap: 6px;
+  }
+  .del-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  /* Section Headers */
+  .ai-section-header {
+    margin-bottom: 32px;
+  }
+  .ai-section-tag {
+    font-size: 0.72rem;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+  }
+  .ai-section-title {
+    font-size: clamp(1.7rem, 5.5vw, 2.2rem);
+    line-height: 1.22;
+    margin-bottom: 10px;
+  }
+  .ai-section-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* Strategic Fit & Engagement Roadmap */
+  .strategic-roadmap-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .strategy-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+  .strategy-tag {
+    font-size: 0.72rem;
+    margin-bottom: 10px;
+  }
+  .strategy-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+  .strategy-lead {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .strategy-list {
+    gap: 12px;
+  }
+  .strategy-list li {
+    font-size: 0.88rem;
+    gap: 10px;
+  }
+  .roadmap-timeline {
+    gap: 16px;
+  }
+  .roadmap-step {
+    gap: 12px;
+  }
+  .roadmap-num {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+  .roadmap-content h4 {
+    font-size: 0.98rem;
+  }
+  .roadmap-content p {
+    font-size: 0.84rem;
+  }
+
+  /* All Services Hub Grid (ai-data-services.html) */
   .all-services-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+  .hub-service-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+  .hub-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+  .hub-service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .hub-service-card p {
+    font-size: 0.88rem;
+    margin-bottom: 18px;
+  }
+
+  /* Related Practices Grid */
+  .related-practices-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .related-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+  .related-card h3 {
+    font-size: 1.15rem;
+  }
+  .related-card p {
+    font-size: 0.86rem;
+    margin-bottom: 16px;
+  }
+
+  /* Scoping CTA Box */
   .scoping-cta-box {
-    padding: 38px 24px;
+    padding: 34px 18px;
+    border-radius: 20px;
+  }
+  .scoping-cta-box h2 {
+    font-size: clamp(1.5rem, 5vw, 2.1rem);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .scoping-cta-box p {
+    font-size: 0.92rem;
+    margin-bottom: 24px;
+  }
+  .scoping-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
   }
   .scoping-guarantees {
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     align-items: flex-start;
   }
+  .guarantee-item {
+    font-size: 0.82rem;
+  }
+
+  /* Inquiry Form Section */
+  .inquiry-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .inquiry-info h2 {
+    font-size: clamp(1.65rem, 5vw, 2.2rem);
+  }
+  .inquiry-info p {
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+  }
+  .check-list li {
+    font-size: 0.86rem;
+    padding: 7px 0;
+  }
+  .form-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+  .form-card h3 {
+    font-size: 1.2rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .fg input,
+  .fg select,
+  .fg textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+    padding: 12px 14px;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    padding: 24px 18px;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Decorative Floating Shapes on Mobile */
+  .fshape {
+    opacity: 0.25;
+    transform: scale(0.65) !important;
+  }
+
   .ai-dropdown-menu {
     position: static;
     transform: none;
@@ -955,5 +1309,39 @@
     padding-right: 0;
     padding-bottom: 14px;
     margin-bottom: 12px;
+  }
+}
+
+/* Small Smart Phones (480px and below) */
+@media (max-width: 480px) {
+  nav {
+    padding: 8px 12px;
+  }
+  .logo-pill {
+    height: 38px;
+    width: 72px;
+  }
+  .ai-top-nav-wrap .back-btn:nth-child(2) {
+    display: none; /* Hide secondary "Home" button on tiny screens to avoid congestion */
+  }
+  .ai-top-nav-wrap .back-btn {
+    padding: 5px 10px;
+    font-size: 0.72rem;
+  }
+  .nav-cta {
+    padding: 6px 10px;
+    font-size: 0.74rem;
+  }
+  .nav-cta i {
+    font-size: 0.75rem;
+  }
+  .ai-hero-title {
+    font-size: 1.85rem;
+  }
+  .hero {
+    padding-top: 80px;
+  }
+  .form-card {
+    padding: 20px 14px;
   }
 }

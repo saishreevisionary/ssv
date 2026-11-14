@@ -36,6 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (form.id === 'adsForm') subject = "PAID ADS Inquiry — SaiShree Media";
       else if (form.id === 'seoForm') subject = "SEO Inquiry — SaiShree Media";
       else if (form.id === 'smForm') subject = "SOCIAL MEDIA Inquiry — SaiShree Media";
+      else if (form.id === 'dataAnnotationForm') subject = "DATA ANNOTATION Inquiry — SaiShree Media";
+      else if (form.id === 'dataLabellingForm') subject = "DATA LABELLING Inquiry — SaiShree Media";
+      else if (form.id === 'imageVideoAnnotationForm') subject = "IMAGE & VIDEO ANNOTATION Inquiry — SaiShree Media";
+      else if (form.id === 'aiTrainingDataForm') subject = "AI TRAINING DATA PREPARATION Inquiry — SaiShree Media";
+      else if (form.id === 'dataCollectionForm') subject = "DATA COLLECTION Inquiry — SaiShree Media";
+      else if (form.id === 'dataEntryForm') subject = "DATA ENTRY & PROCESSING Inquiry — SaiShree Media";
+      else if (form.id === 'dataQualityForm') subject = "DATA QUALITY & VALIDATION Inquiry — SaiShree Media";
+      else if (form.id === 'aiDataForm') subject = "AI DATA SERVICES Inquiry — SaiShree Media";
       
       formData.append("subject", subject);
       formData.append("from_name", "SaiShree Visionary Website");
